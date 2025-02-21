@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Reseteando el documento */
+
+:root {
+    --color-primario: #021716;
+    --color-secundario: #009990;
+    --color-terciario: #009990;
+    --color-hover:  #E1FFBB; 
+
+    --fuente-montserat: "Montserrat", sans-serif;
+    --fuente-krona:"Krona", sans-serif;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+html body{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Hace que el ancho y alto incluyan el padding y el borde */
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.header {
+    padding: 2% 0% 0% 15%;
+    font-family: var(--fuente-montserat);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.header-menu{
+    display: flex;
+    justify-content: left ;
+    gap: 40px;
+    
+}
+
+.header-menu-enlaces-link {
+    color: var(--color-terciario);
+    text-decoration: none;
+    padding: 7px;
+}
+
+.header-menu-enlaces-link:hover{
+    color: var(--color-secundario);
+    font-size: 1.875rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+.presentacion {
+    padding: 3% 15%;
+    display: flex;
+    gap: 85px;
+    align-items: center;
+    justify-content:space-around;
+    flex: 1;
+    margin-bottom: 5%;
+}
+
+.presentacion-contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion-contenido-curriculum{
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.presentacion-contenido-titulo {
+    font-size: 1.875rem;
+    font-family: var(--fuente-krona);
+}
+
+.titulo-destaque {
+    color: var(--color-terciario);
+}
+.presentacion-contenido-texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserat);
+    padding-bottom: 5%;
+}
+
+.presentacion-contenido-curriculum-texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserat);
+   
+}
+.presentacion-contenido-curriculum-texto-ul {
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserat);
+    padding-left: 1.5rem;
+}
+
+
+.foto-presentacion {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    border-radius: 120px;
+    border: 2px solid var(--color-terciario);
+}
+
+.presentacion-enlases {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion-enlaces-subtitulos {
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion-enlaces-link{
+ border-radius: 8px;
+ font-size: 1.5rem;
+ font-weight: 600;
+ padding: 21.5px 0;
+ width: 230px;
+ text-decoration: none;
+ color: var(--color-secundario);
+ font-family: var(--fuente-montserat);
+ border: 2px solid var(--color-terciario) /*tamaño - estilo - color*/;
+ display: flex;
+ gap: 16px;
+ justify-content: center;
+}
+
+.presentacion-enlaces-link:hover{
+    background-color: var(--color-hover);
+    color: var(--color-terciario);
+    cursor: pointer;
+}
+
+.presentacion-imagen {
+    margin: 0.2rem;
+    width: 338px;
+    height: 462px;
+    border: 3px solid #000000;
+}
+
+footer {
+    background-color: var(--color-terciario);
+    padding: 10px;
+    color: #000000;
+    text-align: center;
+    font-family: var(--fuente-montserat);
+    font-size: 1.25rem;
+    font-weight: 400;
+    width: 100%;
+    height: 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/*Resposibidad*/
+
+@media (max-width: 500px){
+    .header {
+        padding: 10%;  
+    }
+    .header-menu{
+        text-align: center;
+        gap: 20px;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse;
+        gap: 30px;
+        margin-bottom: 4rem;
+        padding: 5%;
+    }
+
+    .presentacion-contenido{
+        width: 100%;
+    }
+    
+    .presentacion-contenido-curriculum{
+        width: auto; 
+    }
+    
+    .presentacion-imagen {
+        width: 80%;
+        width: 238px;
+        height: 342px;
+        
+    }
+
+    .foto-presentacion {
+       margin: auto;
+    }
+
+    .footer{
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
